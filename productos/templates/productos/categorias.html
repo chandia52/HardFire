@@ -1,0 +1,22 @@
+{% extends "productos/base.html" %}
+{% load static  %}
+{% block title %}Categorias{% endblock title %}
+{% block content %}
+<div class="container__categories">
+    <div class="publicidad">
+        <video src="{% static 'today-special-burger-ad-poster-design-template-4c15f79ab22ab733d310c3f0fd33157d_screen.mp4' %}" autoplay loop muted >Add 2024</video>
+    </div>
+    <div class="categories__list">
+        <ul>
+            {% for categoria in categorias %}
+                <a href="{% url 'categoria_detail' categoria.id %}">
+                    <li class="list__name">{{ categoria.nombre }}</li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="publicidad">
+        <video src="{% static 'today-special-burger-ad-poster-design-template-4c15f79ab22ab733d310c3f0fd33157d_screen.mp4' %}" autoplay loop muted >Add 2024</video>
+    </div>
+</div>
+{% endblock %}

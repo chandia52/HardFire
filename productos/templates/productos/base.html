@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/f4bf72d695.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <title> {% block title %} {% endblock %} </title>
+</head>
+
+<header>
+    <div class="logo">
+        <a href="/"><img src="{% static 'logo.png' %}" alt=""></a>
+    </div>
+    <div class="nav">
+        <div class="navbar">
+            <ul class="nav__list">
+                <li class="list__item"><a href="{% url "lista_productos" %}">Productos</a></li>
+                <li class="list__item"><a href="#">Sobre Nosotros</a></li>
+                <li class="list__item"><a href="#">Contacto</a></li>
+                <li class="list__item"><a href="#">Unete a Nosotros</a></li>
+                <li class="list__item"><a href="{% url "categoria" %}">Categorias</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="desktop">
+        {% block content %}
+        {% endblock %} 
+    </div>    
+</body>
+<footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="{% static 'logo.png'%} " alt="">
+        </div>
+        <div class="footer-text">
+            <p>© 2020 - Todos los derechos reservados</p>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        </div>
+        <div class="footer_work-withus">
+            <button href="#">¡Trabaja con nosotros!</button>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,46 @@
+{% extends "productos/base.html"%}
+{% load static %}
+{% block title %} {{producto.nombre}}  {% endblock title %}
+
+{% block content %}
+
+    <div class="container__product--info">
+        <div class="slider__container-product">
+            <!-- Vista principal de Producto seleccionado -->
+            <div class="main_view">
+                <img src="{{ producto.imagen1.url }}" id="main" alt="{{ producto.nombre }} Imagen 1 ">
+            </div>
+    
+            <!-- Todas las imagenes cargadas (max 4) -->
+            <div class="side_view">
+                <img src="{{ producto.imagen1.url }}" onclick="change(this.src)">
+                <img src="{{ producto.imagen2.url }}" onclick="change(this.src)">
+                {% if producto.imagen3 %}
+                    <img src="{{ producto.imagen3.url }}" onclick="change(this.src)">
+                    {% if producto.imagen4 %}
+                        <img src="{{ producto.imagen4.url }}" onclick="change(this.src)">
+                    {% endif %}
+                {% endif %}
+            </div>
+
+        </div>
+        <div class="product-details">
+            <h2>{{ producto.nombre }}</h2>
+            <h3> $ {{producto.precio}} </h3>
+            <p>{{ producto.descripcion }}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis inventore reiciendis incidunt numquam dignissimos laudantium laboriosam, labore commodi cumque sequi! Aut inventore obcaecati soluta iste doloribus unde aspernatur blanditiis! In optio doloremque quasi non? Soluta, excepturi veritatis eum, quaerat commodi praesentium ea totam suscipit expedita reprehenderit culpa ducimus, accusamus cum? Distinctio aut at nemo quisquam, ea doloremque unde quidem similique sunt nisi rerum. Esse, laudantium eius, tempora harum reiciendis, officiis voluptas alias nam iste assumenda est. Labore neque ipsum, exercitationem laudantium, officia fugit fugiat cumque reiciendis provident, quos libero voluptatibus. Nihil voluptatem reiciendis, tempora quod blanditiis id nesciunt consequatur.</p>
+        </div>
+    </div>
+    
+
+
+    {% comment %} <div class="info--product">
+        <h2>{{ producto.nombre }}</h2>
+        <h3> ${{ producto.precio }}</h3>
+        <p> {{producto.descripcion}}</p>
+
+    </div> {% endcomment %}
+
+
+
+{% endblock content %}
