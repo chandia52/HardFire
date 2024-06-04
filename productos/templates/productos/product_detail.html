@@ -25,22 +25,33 @@
 
         </div>
         <div class="product-details">
-            <h2>{{ producto.nombre }}</h2>
-            <h3> $ {{producto.precio}} </h3>
-            <p>{{ producto.descripcion }}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis inventore reiciendis incidunt numquam dignissimos laudantium laboriosam, labore commodi cumque sequi! Aut inventore obcaecati soluta iste doloribus unde aspernatur blanditiis! In optio doloremque quasi non? Soluta, excepturi veritatis eum, quaerat commodi praesentium ea totam suscipit expedita reprehenderit culpa ducimus, accusamus cum? Distinctio aut at nemo quisquam, ea doloremque unde quidem similique sunt nisi rerum. Esse, laudantium eius, tempora harum reiciendis, officiis voluptas alias nam iste assumenda est. Labore neque ipsum, exercitationem laudantium, officia fugit fugiat cumque reiciendis provident, quos libero voluptatibus. Nihil voluptatem reiciendis, tempora quod blanditiis id nesciunt consequatur.</p>
+            <h2>{{ producto.nombre }}</h2><hr>
+            <h3> $ {{producto.precio}} </h3><hr>
+            <h4>Hasta en 12 cuotas</h4><hr>
+            <div class="product-compra">
+                <div class="product-add">
+                    <div class="add">
+                        <i class="fa-solid fa-truck fa-2xl"></i>
+                        <h3>Envio Gratis</h3>
+                    </div>
+                    <div class="add">
+                        <i class="fa-solid fa-shield-halved fa-2xl"></i>
+                        <h3>Garantia por 12 meses </h3>
+                    </div>
+                    <div class="add">
+                        <i class="fa-solid fa-check fa-2xl"></i>
+                        <h3>En Stock</h3>
+                    </div>
+                </div>
+                <hr>
+                <button class="custom-btn btn-3"><span>Comprar ahora</span></button>
+            </div>
         </div>
     </div>
+    <div class="description-product">
+        <h3>Descripcion</h3>
+        <p>{{ producto.descripcion }}
+    </div>
     
-
-
-    {% comment %} <div class="info--product">
-        <h2>{{ producto.nombre }}</h2>
-        <h3> ${{ producto.precio }}</h3>
-        <p> {{producto.descripcion}}</p>
-
-    </div> {% endcomment %}
-
-
 
 {% endblock content %}

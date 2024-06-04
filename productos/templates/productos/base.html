@@ -13,7 +13,7 @@
 
 <header>
     <div class="logo">
-        <a href="/"><img src="{% static 'logo.png' %}" alt=""></a>
+        <a href="/"><img src="{% static 'media/logo.png' %}" alt=""></a>
     </div>
     <div class="nav">
         <div class="navbar">
@@ -21,7 +21,6 @@
                 <li class="list__item"><a href="{% url "lista_productos" %}">Productos</a></li>
                 <li class="list__item"><a href="#">Sobre Nosotros</a></li>
                 <li class="list__item"><a href="#">Contacto</a></li>
-                <li class="list__item"><a href="#">Unete a Nosotros</a></li>
                 <li class="list__item"><a href="{% url "categoria" %}">Categorias</a></li>
             </ul>
         </div>
@@ -34,9 +33,31 @@
     </div>    
 </body>
 <footer>
+    <div class="sponsors">
+        <div class="container-sponsors">
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/amd.png' %}" alt=""></a>
+            </div>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/ASRock.png' %}" alt=""></a>
+            </div>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/Gigabyte.png' %}" alt=""></a>
+            </div>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/intel.png' %}" alt=""></a>
+            </div>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/Samsung.png' %}" alt=""></a>
+            </div>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'media/sponsors/Steelseries.png' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer-logo">
-            <img src="{% static 'logo.png'%} " alt="">
+            <a href="/"><img src="{% static 'media/logo.png'%} " alt=""></a>
         </div>
         <div class="footer-text">
             <p>© 2020 - Todos los derechos reservados</p>
