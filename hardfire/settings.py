@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'livereload',
     'productos',
+    'clients',
+
 ]
 
 MIDDLEWARE = [
@@ -131,5 +132,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
-
-
+AUTH_USER_MODEL = 'clients.User'
