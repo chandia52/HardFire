@@ -1,8 +1,21 @@
-{% if message %}
-    <p>{{message}}</p>
-{% endif %}
+{% extends "productos/base.html" %}
+{% load static %}
+
+
+{% block content %}
+    
 <form method="POST" action="">
     {% csrf_token %}
-    {{form.as_p}} 
-    <input type="submit" value= 'Iniciar sesion'>
+    <div class="container-form">
+        {% if message %}
+        
+        <p>{{message}}</p>
+        {% endif %}
+        
+        {{ form }} 
+        <button class= "log center" type="submit">Iniciar sesion</button>
+
+    </div>
 </form>
+
+{% endblock content %}

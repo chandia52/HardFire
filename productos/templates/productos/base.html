@@ -25,8 +25,8 @@
                 <li class="list__item"><a href="{% url "categoria" %}">Categorias</a></li>
             </ul>
             <div class="auth">
-                <button type="submit" class="log">Registro</button>
-                <button class="reg">Login</button>
+                <a href="{% url 'clients:create' %}"><button type="submit" class="log">Registro</button></a>
+                <a href="{% url 'clients:login' %}"><button class="reg">Login</button></a> 
             </div>
         </div>
     </div>

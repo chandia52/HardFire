@@ -1,17 +1,15 @@
 {% extends "productos/base.html" %}
 {% block content %}
 
-<h3>hola</h3>
-
 <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Crear">
+    <div class="container-form">
 
+        {{ form }}
+        <button class="reg center" type="submit">Crear</button>
+
+    </div>
 
 </form>
 
 {% endblock content %}
-
-
-
