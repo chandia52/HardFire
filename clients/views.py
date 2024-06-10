@@ -28,7 +28,7 @@ def login(request):
 
 @login_required(login_url= 'clients:login')
 def dashboard(request):
-    return render (request,'dashboard.html',{})
+    return render (request,'productos/home.html',{})
 
 @login_required(login_url= 'clients:login')
 def logout(request):
