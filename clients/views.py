@@ -4,6 +4,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth import logout as logout_django
 from django.contrib.auth.decorators import login_required
+from productos.models import Producto
+
+
 def login(request):
     if request.user.is_authenticated:
         return redirect('clients:dashboard')
@@ -49,3 +52,4 @@ def create(request):
     }
     
     return render (request,'create.html',context)
+

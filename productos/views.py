@@ -55,4 +55,7 @@ class ProductoDetailView(DetailView):
     model = Producto
     template_name = "productos/product_detail.html"
 
-
+def buscar(request):
+    query = request.GET.get('q')
+    products = Producto.objects.filter(nombre__icontains=query)
+    return render(request, 'productos/buscar.html', {'products':products})

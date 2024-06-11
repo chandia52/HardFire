@@ -13,18 +13,21 @@
 </head>
 
 <header>
-    <div class="logo">
-        <a href="/"><img src="{% static 'media/logo.png' %}" alt=""></a>
-    </div>
-    <div class="nav">
-        <div class="navbar">
-            <ul class="nav__list">
-                <li class="list__item"><a href="{% url "lista_productos" %}">Productos</a></li>
-                <li class="list__item"><a href="#">Sobre Nosotros</a></li>
-                <li class="list__item"><a href="#">Contacto</a></li>
-                <li class="list__item"><a href="{% url "categoria" %}">Categorias</a></li>
-            </ul>
-            {% if user.is_authenticated %}
+    <div class="container-header">
+        <div class="logo">
+            <a href="/"><img src="{% static 'media/logo.png' %}" alt=""></a>
+        </div>
+        <div class="wrap">
+            <form action="{% url 'buscar' %}" method="get">
+            <div class="search">
+                <input type="search" name= 'q' class="searchTerm" placeholder="Que estas buscando?" required>
+                <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+            </div>
+        </div>
+        </form>
+        {% if user.is_authenticated %}
                 <div class="auth">
                     <a href="{% url 'clients:logout' %}"><button class="reg">Cerrar Sesion</button></a> 
                 </div>
@@ -34,6 +37,15 @@
                     <a href="{% url 'clients:login' %}"><button class="reg">Login</button></a> 
                 </div>
             {% endif %}
+    </div>
+    <div class="nav">
+        <div class="navbar">
+            <ul class="nav__list">
+                <li class="list__item"><a href="{% url 'lista_productos' %}">Productos</a></li>
+                <li class="list__item"><a href="#">Sobre Nosotros</a></li>
+                <li class="list__item"><a href="#">Contacto</a></li>
+                <li class="list__item"><a href="{% url 'categoria' %}">Categorias</a></li>
+            </ul>
         </div>
     </div>
 </header>
