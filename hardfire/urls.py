@@ -28,7 +28,8 @@ urlpatterns = [
     path('categorias',categorias,name='categoria'),
     path('categoria/<int:categoria_id>/', categoria_detail , name='categoria_detail'),
     path('clients/',include('clients.urls')),
-    path('buscar/',buscar,name='buscar')
+    path('buscar/',buscar,name='buscar'),
+    path('carro/', include('carro.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

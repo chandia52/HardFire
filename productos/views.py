@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,redirect
 
 from django.http import HttpResponse
 
@@ -7,6 +7,7 @@ from productos.models import Producto,Categoria
 from django.views.generic import DetailView
 
 from productos.models import Producto
+
 # Create your views here.
 
 def home(request):

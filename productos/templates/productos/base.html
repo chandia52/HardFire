@@ -28,15 +28,18 @@
         </div>
         </form>
         {% if user.is_authenticated %}
+                <a href="{% url 'carro:carro' %}"><i class="fa-solid fa-cart-shopping"></i></a>
                 <div class="auth">
                     <a href="{% url 'clients:logout' %}"><button class="reg">Cerrar Sesion</button></a> 
                 </div>
+                
                 {% else %}
                 <div class="auth">
                     <a href="{% url 'clients:create' %}"><button type="submit" class="log">Registro</button></a>
                     <a href="{% url 'clients:login' %}"><button class="reg">Login</button></a> 
                 </div>
-            {% endif %}
+                
+        {% endif %}
     </div>
     <div class="nav">
         <div class="navbar">
@@ -55,6 +58,7 @@
         {% endblock %} 
     </div>    
 </body>
+
 <footer>
     <div class="sponsors">
         <div class="container-sponsors">

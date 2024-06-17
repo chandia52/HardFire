@@ -7,6 +7,10 @@ a{
     text-decoration: none;
     color: #000;
 }
+footer{
+    margin-top: 40vh;
+}
+
 
  /* NAVBAR */
 
@@ -138,6 +142,7 @@ a{
     scale: 1.1;
 }
 
+
 /* IMAGEN DESKTOP */
 
 .imagen-desktop img{
@@ -182,6 +187,7 @@ a{
     text-decoration: none;
     color: #000
 }
+
 .card-product{
     display: flex;
     flex-direction: column;
@@ -238,6 +244,7 @@ a{
     justify-content: space-between;
     height: 13rem;
     box-shadow: -1px -1px 3px #000;
+    margin-top: auto;
 
 }
 
@@ -307,7 +314,6 @@ a{
 
 .card-price{
     width: min-content;
-    padding: 1rem;
     filter: drop-shadow(1px 1px 6px #919191);
     position: relative;
     left: 50%;
@@ -803,4 +809,50 @@ a{
 .container-form p{
     text-align: center;
     align-self: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-cart{
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 1.3rem;
+    align-items: center;
+    height: 20vh;
+    position: relative;
+}
+
+.cart{
+    width: 80vw;
+    margin: 0 auto;
+}
+.cart-info{
+    position: relative;
+    width: 25vw;
+}
+
+.cart-buttons i{
+    font-size: 1.5rem;
+    margin: 15px;
+}
+.cart-name{
+    width: 20rem;
+}
+
+.cart-price{
+    filter: drop-shadow(1px 1px 6px #919191);
+}
+.cart-name, .card-price, .cart-quantity{
+    margin: 10px 0;
+}
+
+.not-cart{
+    border: 1px solid #919191;
 }
