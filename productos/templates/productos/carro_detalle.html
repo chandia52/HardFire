@@ -1,12 +1,19 @@
 {% extends 'productos/base.html' %}
 {% load static %}
 {% block content %}
-
-{% if user.is_authenticated %}
     <h1>Carro de compras</h1>
-        <div class="cart">
     
+    {% if productos_en_carro|length == 0 %}
+    <div class="card">
+        <p>No hay nada en tu carrito, ve a elegir tu producto! </p>
+    </div>
+    {% else %}
+    <div class="cart">
         {% for producto_id, producto in productos_en_carro %}
+        <div class="top-cart">
+            <h2>Tu carro de compras contiene {{ productos_en_carro|length }} producto/s</h2>
+            <a href="{% url 'carro:limpiar' %}"><button>Vaciar Carro</button></a>
+        </div>
         <div class="card-cart">
             <div class="card-image">
                 <img src="{{producto.imagen}}" alt="{{producto.nombre}}">
@@ -17,7 +24,7 @@
                 </div>
                 <div class="cart-price">
                     <p>Unidad ${{producto.precio}}</p>
-                    </div>
+                </div>
                 <div class="cart-quantity">
                     <h2>Cantidad = {{producto.cantidad}}</h2>
                 </div>
@@ -29,20 +36,15 @@
                 
             </div>
         </div>
-            <div class="cart-total">
-                <p>Total {{importe_total_carro}}</p>
-
-            <div class="not-cart">
-                <div class="not-cart-text">
-                    <p>No hay nada en tu carrito, ve a elegir tu producto! </p>
-                </div>
-
+        <div class="cart-total">
+            <h2>Total {{importe_total_carro}}</h2>
+            <div class="button-pay">
+                <button class="custom-btn btn-3"><span>Pagar</span></button>
             </div>
-            {% endfor %}
-{% else %}
-<h1>Debes estar logueado para ver tu carrito</h1>
-{% endif %}
+        </div>
         
-    
-
+        {% endfor %}
+    {% endif %}    
+        
+        
 {% endblock %}

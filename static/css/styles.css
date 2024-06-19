@@ -7,9 +7,7 @@ a{
     text-decoration: none;
     color: #000;
 }
-footer{
-    margin-top: 40vh;
-}
+
 
 
  /* NAVBAR */
@@ -236,7 +234,9 @@ footer{
 }
 
 /* FOOTER */
-
+footer{
+    margin-top: 40vh;
+}
 .footer{
     background-color: #48e;
     display: flex;
@@ -244,8 +244,6 @@ footer{
     justify-content: space-between;
     height: 13rem;
     box-shadow: -1px -1px 3px #000;
-    margin-top: auto;
-
 }
 
 .footer-logo img{
@@ -855,4 +853,18 @@ footer{
 
 .not-cart{
     border: 1px solid #919191;
+}
+
+.top-cart{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.cart-total {
+    display: flex;
+    justify-content: space-around;
+    margin: 20vh 10vw;
+
+
 }
